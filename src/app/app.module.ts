@@ -31,7 +31,7 @@ import { LoginComponent } from './login/login.component';
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
