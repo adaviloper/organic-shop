@@ -8,12 +8,13 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./app-nav.component.css']
 })
 export class AppNavComponent {
+  user: firebase.User;
 
   constructor(private afAuth: AngularFireAuth) {
-    afAuth.authState.subscribe(x => console.log('app-nav.component.ts@:13', x));
+    afAuth.authState.subscribe(user => this.user = user);
   }
 
-  logout() {
+  logout(): void {
     this.afAuth.signOut();
   }
 }
